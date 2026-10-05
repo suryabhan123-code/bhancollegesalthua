@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My College | Official Website</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#222;background:#f5f7fb;line-height:1.6}
+.top{background:#073b78;color:#fff;text-align:center;padding:8px;font-size:14px}
+header{background:#fff;padding:14px 6%;display:flex;align-items:center;gap:15px;box-shadow:0 2px 8px #0002}
+.logo{width:75px;height:75px;border-radius:50%;background:#073b78;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:24px}
+.head h1{color:#073b78;font-size:28px}.head p{color:#666}
+nav{background:#0756a8;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;position:sticky;top:0;z-index:1000;box-shadow:0 3px 8px #0003}
+nav a{color:#fff;text-decoration:none;padding:14px 20px;font-weight:bold;transition:.25s;display:block}
+nav a:hover,nav a.active{background:#f39c12;color:#fff}
+.dropdown{position:relative}
+.dropdown .dropbtn{display:block}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;min-width:190px;background:#fff;box-shadow:0 4px 10px #0003;z-index:1001;text-align:left}
+.dropdown-content a{color:#222;padding:11px 16px;border-bottom:1px solid #eee}
+.dropdown-content a:hover{background:#f39c12;color:#fff}
+.dropdown:hover .dropdown-content{display:block}
+.menu-btn{display:none;color:#fff;font-size:28px;padding:10px 18px;cursor:pointer;text-align:right}
+@media(max-width:700px){
+ nav{display:block;text-align:right}
+ nav a{display:none;text-align:left;border-top:1px solid #ffffff33;padding:12px 20px}
+ nav.open a{display:block}
+ .dropdown{display:block;text-align:left}
+ .dropdown-content{position:static;display:none;box-shadow:none}
+ .dropdown.open .dropdown-content{display:block}
+ .dropdown-content a{padding-left:38px}
+ .menu-btn{display:block}
+}
+.notice{background:#fff;padding:9px 6%;border-bottom:1px solid #ddd}
+.notice b{color:#c0392b}.ticker{color:#333}
+.hero{min-height:430px;background:linear-gradient(90deg,#073b78dd,#0756a8aa),url("college.jpg") center/cover;display:flex;align-items:center;padding:50px 8%;color:white}
+.hero-content{max-width:700px}.hero h2{font-size:46px;line-height:1.15;margin-bottom:15px}.hero p{font-size:19px;margin-bottom:25px}
+.btn{display:inline-block;background:#f39c12;color:#fff;padding:12px 24px;border-radius:5px;text-decoration:none;font-weight:bold;margin-right:8px}
+.btn.secondary{background:#fff;color:#0756a8}
+section{padding:55px 7%}.title{text-align:center;color:#073b78;font-size:32px;margin-bottom:10px}.subtitle{text-align:center;color:#666;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#fff;padding:25px;border-radius:10px;box-shadow:0 3px 12px #0001;text-align:center}
+.card h3{color:#0756a8;margin:10px 0}
+.icon{font-size:38px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.about-box{background:#fff;padding:30px;border-radius:10px;box-shadow:0 3px 12px #0001}
+.course{border-left:5px solid #f39c12;text-align:left}
+.notice-list{max-width:900px;margin:auto;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 3px 12px #0001}
+.notice-list div{padding:15px 20px;border-bottom:1px solid #eee}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
+.gallery div{height:160px;background:linear-gradient(135deg,#dcecff,#a9cfff);display:flex;align-items:center;justify-content:center;color:#0756a8;font-weight:bold;border-radius:8px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+form{background:#fff;padding:25px;border-radius:10px;box-shadow:0 3px 12px #0001}
+input,textarea,select{width:100%;padding:12px;margin:7px 0 15px;border:1px solid #ccc;border-radius:5px}
+button{border:0;cursor:pointer}
+footer{background:#082b54;color:#fff;padding:35px 7%;text-align:center}
+footer p{margin:7px}
+@media(max-width:700px){.about,.contact{grid-template-columns:1fr}.hero h2{font-size:34px}header{padding:12px 4%}.head h1{font-size:21px}}
+</style>
+</head>
+<body>
+
+<div class="top">📞 +91-9876543210 &nbsp; | &nbsp; ✉ info@mycollege.edu.in</div>
+
+<header>
+  <div class="logo">MC</div>
+  <div class="head">
+    <h1>MY COLLEGE</h1>
+    <p>Excellence in Education • Discipline • Development</p>
+  </div>
+</header>
+
+<nav id="mainNav">
+  <div class="menu-btn" onclick="toggleMenu()">☰ Menu</div>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <div class="dropdown">
+    <a href="#courses" class="dropbtn">Courses ▼</a>
+    <div class="dropdown-content">
+      <a href="#bed">B.Ed.</a>
+      <a href="#deled">D.El.Ed.</a>
+      <a href="#bped">B.P.Ed.</a>
+      <a href="#med">M.Ed.</a>
+    </div>
+  </div>
+  <a href="#faculty">Faculty</a>
+  <a href="#admission">Admission</a>
+  <a href="#notice">Notice</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="notice"><b>📢 Latest Notice:</b> <span class="ticker">Admission open for new academic session 2026-27. | College notices and important updates will appear here.</span></div>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>Welcome to My College</h2>
+    <p>एक बेहतर भविष्य के लिए गुणवत्तापूर्ण शिक्षा, अनुशासन और कौशल विकास का केंद्र।</p>
+    <a class="btn" href="#admission">Apply Now</a>
+    <a class="btn secondary" href="#courses">View Courses</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="title">About Our College</h2>
+  <p class="subtitle">हमारा उद्देश्य विद्यार्थियों को गुणवत्तापूर्ण शिक्षा और बेहतर अवसर प्रदान करना है।</p>
+  <div class="about">
+    <div class="about-box">
+      <h3>हमारे बारे में</h3>
+      <p>My College एक आधुनिक शिक्षण संस्थान है जहाँ विद्यार्थियों के academic, professional और personality development पर विशेष ध्यान दिया जाता है।</p>
+      <br><p>कॉलेज में अनुभवी शिक्षक, आधुनिक सुविधाएँ, library, computer lab तथा विद्यार्थियों के लिए विभिन्न गतिविधियों की व्यवस्था है।</p>
+    </div>
+    <div class="about-box">
+      <h3>हमारा Vision</h3>
+      <p>ज्ञान, कौशल और संस्कार से युक्त ऐसे विद्यार्थियों का निर्माण करना जो समाज और राष्ट्र के विकास में महत्वपूर्ण योगदान दे सकें।</p>
+      <br>
+      <h3>हमारा Mission</h3>
+      <p>Accessible, affordable और quality education के माध्यम से विद्यार्थियों को career-ready बनाना।</p>
+    </div>
+  </div>
+</section>
+
+<section id="courses">
+  <h2 class="title">Our Courses</h2>
+  <p class="subtitle">उपलब्ध पाठ्यक्रम</p>
+  <div class="cards">
+    <div class="card course" id="bed"><div class="icon">🎓</div><h3>B.Ed.</h3><p>Bachelor of Education</p><p>Professional Teacher Education Programme</p></div>
+    <div class="card course" id="deled"><div class="icon">📘</div><h3>D.El.Ed.</h3><p>Diploma in Elementary Education</p></div>
+    <div class="card course" id="bped"><div class="icon">🏃</div><h3>B.P.Ed.</h3><p>Bachelor of Physical Education</p></div>
+    <div class="card course" id="med"><div class="icon">📚</div><h3>M.Ed.</h3><p>Master of Education</p></div>
+  </div>
+</section>
+
+<section id="faculty">
+  <h2 class="title">Faculty & Staff</h2>
+  <p class="subtitle">हमारे अनुभवी शिक्षक एवं कर्मचारी</p>
+  <div class="cards">
+    <div class="card"><div class="icon">👨‍🏫</div><h3>Dr. Principal Name</h3><p>Principal</p></div>
+    <div class="card"><div class="icon">👩‍🏫</div><h3>Dr. Teacher Name</h3><p>Assistant Professor</p></div>
+    <div class="card"><div class="icon">👨‍🏫</div><h3>Teacher Name</h3><p>Assistant Professor</p></div>
+  </div>
+</section>
+
+<section id="admission">
+  <h2 class="title">Admission</h2>
+  <p class="subtitle">Academic Session 2026-27</p>
+  <div class="cards">
+    <div class="card"><div class="icon">📝</div><h3>Online Application</h3><p>Admission form online भरें और आवश्यक documents जमा करें।</p><a class="btn" href="#contact">Apply</a></div>
+    <div class="card"><div class="icon">💳</div><h3>Online Fee Payment</h3><p>College fee online जमा करने की सुविधा।</p><a class="btn" href="#contact">Pay Fee</a></div>
+    <div class="card"><div class="icon">📄</div><h3>Download</h3><p>Prospectus, admission notice और forms यहाँ उपलब्ध होंगे।</p><a class="btn" href="#notice">View</a></div>
+  </div>
+</section>
+
+<section id="notice">
+  <h2 class="title">Notice Board</h2>
+  <p class="subtitle">Latest College Notices</p>
+  <div class="notice-list">
+    <div>📌 Admission open for Session 2026-27 <b>NEW</b></div>
+    <div>📌 विद्यार्थियों के लिए महत्वपूर्ण सूचना</div>
+    <div>📌 Examination / Internal Assessment Schedule</div>
+    <div>📌 College academic calendar</div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 class="title">Photo Gallery</h2>
+  <p class="subtitle">College activities and events</p>
+  <div class="gallery">
+    <div>College Building</div><div>Class Room</div><div>Seminar</div><div>NCC / NSS</div><div>Sports</div><div>Annual Function</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="title">Contact Us</h2>
+  <p class="subtitle">हमसे संपर्क करें</p>
+  <div class="contact">
+    <div class="about-box">
+      <h3>College Address</h3>
+      <p>My College, Main Road, Bihar, India</p><br>
+      <p>📞 Phone: +91-9876543210</p>
+      <p>✉ Email: info@mycollege.edu.in</p>
+      <p>🌐 Website: www.mycollege.edu.in</p>
+    </div>
+    <form onsubmit="sendMessage(event)"data-netlify="true">
+      <h3>Send Enquiry</h3>
+      <input id="name" placeholder="Your Name" required>
+      <input id="email" type="email" placeholder="Email" required>
+      <input id="phone" placeholder="Mobile Number" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button class="btn" type="submit">Submit Enquiry</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <h2>MY COLLEGE</h2>
+  <p>Quality Education for a Better Future</p>
+  <p>© 2026 My College. All Rights Reserved.</p>
+</footer>
+
+<script>
+function sendMessage(e){
+  e.preventDefault();
+  alert("धन्यवाद! आपकी enquiry सफलतापूर्वक submit हो गई है।");
+}
+function toggleMenu(){
+  document.getElementById("mainNav").classList.toggle("open");
+}
+document.querySelectorAll("#mainNav a").forEach(function(link){
+  link.addEventListener("click", function(){
+    if(link.classList.contains("dropbtn") && window.innerWidth <= 700){
+      link.parentElement.classList.toggle("open");
+      return;
+    }
+    document.getElementById("mainNav").classList.remove("open");
+  });
+});
+</script>
+</body>
+</html>
